@@ -1,52 +1,51 @@
-# 💬 Real-Time Chat Application (MERN Stack)
+# Chatify
 
-![Status](https://img.shields.io/badge/Status-Learning%20Project-blue)
-![Tech](https://img.shields.io/badge/Stack-MERN-green)
+![Status](https://img.shields.io/badge/Status-Live-success)
+![MERN](https://img.shields.io/badge/Stack-MERN-blue)
 
-Hi! I'm **Siddhartha**, an EEE student passionate about breaking into the IT sector.
+**A production-ready real-time messaging platform built for performance and scalability.**
+Chatify enables instant communication with secure authentication, persistent storage, and a modern responsive interface.
 
-This is my capstone project to master **Full-Stack Web Development**. I built this real-time chat app to understand how modern web apps handle instant communication, secure authentication, and database management.
+**Live Demo:** [https://chatify-f3510j6fi-siddharthag2004s-projects.vercel.app/login](https://chatify-f3510j6fi-siddharthag2004s-projects.vercel.app/login)
 
-👉 **[Live Demo Link Here - Add your Vercel Link later]**
-
----
-
-## 🎯 Why I Built This?
-Coming from an Electrical Engineering background, I wanted to challenge myself with a complex software project. I followed a project-based learning approach to understand:
-* How **WebSockets** (Socket.io) differ from standard HTTP requests.
-* How to secure user data using **JWT (JSON Web Tokens)** and HttpOnly cookies.
-* How to manage global state in a React application using **Zustand** (an alternative to Redux).
+![App Screenshot](frontend/public/screenshot-for-readme.png)
 
 ---
 
-## 💻 Tech Stack
-I chose the **MERN Stack** because it's the industry standard for full-stack JavaScript development.
+## Tech Stack
 
-* **Frontend:** React.js, Tailwind CSS, DaisyUI (for UI components)
-* **Backend:** Node.js, Express.js
-* **Database:** MongoDB (using Mongoose for modeling)
-* **Real-time:** Socket.io
-* **Security:** JWT, BCrypt, Arcjet (for rate limiting)
-* **Tools:** Cloudinary (Image storage), Resend (Email services)
+* **Frontend:** React, TailwindCSS, DaisyUI, Zustand
+* **Backend:** Node.js, Express
+* **Database:** MongoDB, Mongoose
+* **Real-time:** Socket.io (WebSockets)
+* **Security:** JWT (HttpOnly Cookies), Arcjet, BCrypt
 
 ---
 
-## ✨ Features I Implemented
-* **Authentication:** Users can sign up and log in securely.
-* **Real-Time Messaging:** Messages appear instantly without refreshing the page.
-* **Online Status:** You can see who is currently online (green dot indicator).
-* **Image Sharing:** Users can upload profile pictures and send images in chat.
-* **Theme Switcher:** I added 32+ different color themes (using DaisyUI).
+## Key Features
+
+* **Real-time Messaging:** Instant bi-directional communication using Socket.io.
+* **Secure Authentication:** Custom JWT implementation with HttpOnly cookies.
+* **Global State Management:** Optimized state handling with Zustand.
+* **Media Support:** Image uploads and storage via Cloudinary.
+* **Online Presence:** Accurate online/offline status indicators.
+* **Dynamic Theming:** 32+ theme options with persistent user preference.
 
 ---
 
-## 🚀 Challenges & Learnings
-Building this wasn't easy! Here are some hurdles I overcame:
-1.  **CORS Errors:** I spent a lot of time fixing connection issues between the Frontend (port 5173) and Backend (port 5001).
-2.  **Environment Variables:** I learned how important `.env` files are for keeping API keys secure and not exposing them on GitHub.
-3.  **Deployment:** I learned how to deploy a split-stack app using **Render** (Backend) and **Vercel** (Frontend).
+## Technical Highlights
+
+* **Concurrency:** Implemented Socket.io to handle multiple concurrent user connections with low latency.
+* **Security:** Secured API endpoints against abuse using Arcjet rate-limiting and protected routes.
+* **Deployment:** Configured a split-stack deployment pipeline (Render for Backend, Vercel for Frontend).
 
 ---
+
+## Run Locally
+
+**1. Clone the repository**
+```bash
+git clone [https://github.com/Siddharthag2004/chatify-portfolio.git](https://github.com/Siddharthag2004/chatify-portfolio.git)
 
 ## 🛠️ How to Run Locally
 If you want to test this on your machine:
@@ -81,3 +80,106 @@ I am a 2026 Batch student looking for **Software Developer / Web Developer** rol
 
 ---
 *This project was built for educational purposes to demonstrate my skills in Full Stack Development.*
+# Chatify
+
+A production-ready real-time messaging platform built for performance and scalability.  
+Chatify enables instant communication with secure authentication, persistent storage, and a modern responsive interface.
+
+Live Demo:  
+https://chatify-f3510j6fi-siddharthag2004s-projects.vercel.app/login
+
+---
+
+## Tech Stack
+
+Frontend:
+- React
+- TailwindCSS
+- DaisyUI
+- Zustand
+
+Backend:
+- Node.js
+- Express
+
+Database:
+- MongoDB
+- Mongoose
+
+Real-time:
+- Socket.io (WebSockets)
+
+Security:
+- JWT (HttpOnly Cookies)
+- Arcjet
+- BCrypt
+
+---
+
+## Key Features
+
+- Real-time bi-directional messaging using Socket.io  
+- Secure authentication with custom JWT and HttpOnly cookies  
+- Global state management using Zustand  
+- Image upload and storage with Cloudinary  
+- Online/offline user presence indicators  
+- 32+ dynamic themes with persistent user preference  
+
+---
+
+## Technical Highlights
+
+- Handles multiple concurrent users with low-latency real-time communication  
+- API protection using Arcjet rate limiting and secured routes  
+- Split-stack deployment (Render for Backend, Vercel for Frontend)  
+
+---
+
+## How to Run Locally
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Siddharthag2004/chatify-portfolio.git
+```
+
+2. Install dependencies:
+```bash
+cd backend && npm install
+cd ../frontend && npm install
+```
+
+3. Setup environment variables:
+
+Create a `.env` file inside the backend folder and add:
+```
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_API_KEY=your_key
+CLOUDINARY_SECRET=your_secret
+```
+
+4. Run the application:
+
+Terminal 1 (Backend):
+```bash
+npm run dev
+```
+
+Terminal 2 (Frontend):
+```bash
+npm run dev
+```
+
+---
+
+## Contact
+
+Siddhartha Gurrapu  
+2026 Batch | Software Developer / Web Developer  
+
+LinkedIn: https://www.linkedin.com/in/siddhartha-gurrapu-8b8069263/  
+Email: gurrapusiddhartha2004@gmail.com  
+
+---
+
+This project was built for educational and portfolio purposes to demonstrate full stack development skills.
