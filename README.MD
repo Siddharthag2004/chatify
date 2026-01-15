@@ -6,7 +6,7 @@
 **A production-ready real-time messaging platform built for performance and scalability.**
 Chatify enables instant communication with secure authentication, persistent storage, and a modern responsive interface.
 
-**Live Demo:** [https://chatify-lovat.vercel.app/login)
+**Live Demo:** [https://chatify-lovat.vercel.app/)
 
 ![App Screenshot](frontend/public/screenshot-for-readme.png)
 
