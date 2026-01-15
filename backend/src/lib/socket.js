@@ -1,15 +1,19 @@
 import { Server } from "socket.io";
 import http from "http";
 import express from "express";
-import { ENV } from "./env.js";
+import "dotenv/config"; // <--- 1. ADD THIS to ensure variables are loaded
+// import { ENV } from "./env.js"; // <--- 2. REMOVE or COMMENT this out
 import { socketAuthMiddleware } from "../middleware/socket.auth.middleware.js";
 
 const app = express();
 const server = http.createServer(app);
 
+// 3. Log the URL to debug (Check your Render logs for this!)
+console.log("Allowed CORS Origin:", process.env.CLIENT_URL);
+
 const io = new Server(server, {
   cors: {
-    origin: [ENV.CLIENT_URL],
+    origin: [process.env.CLIENT_URL], // <--- 4. USE process.env DIRECTLY
     credentials: true,
   },
 });
