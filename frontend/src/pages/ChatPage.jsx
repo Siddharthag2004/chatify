@@ -12,10 +12,9 @@ function ChatPage() {
   const { activeTab, selectedUser } = useChatStore();
 
   return (
-    <div className="relative w-full max-w-6xl h-screen lg:h-[800px]">
+    <div className="relative w-full max-w-6xl h-[calc(100vh-4rem)] lg:h-[800px]">
       <BorderAnimatedContainer>
         {/* LEFT SIDE (Sidebar) */}
-        {/* Logic: Hidden on mobile if user selected, always flex on large screens */}
         <div 
           className={`bg-slate-800/50 backdrop-blur-sm flex flex-col transition-all duration-200
           ${selectedUser ? "hidden lg:flex" : "flex"} 
@@ -30,7 +29,6 @@ function ChatPage() {
         </div>
 
         {/* RIGHT SIDE (Chat Window) */}
-        {/* Logic: Hidden on mobile if NO user selected, always flex on large screens */}
         <div 
           className={`flex-1 flex flex-col bg-slate-900/50 backdrop-blur-sm transition-all duration-200
           ${!selectedUser ? "hidden lg:flex" : "flex"}`}
